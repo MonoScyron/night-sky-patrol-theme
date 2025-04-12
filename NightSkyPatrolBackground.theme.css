@@ -71,9 +71,9 @@
 	border: 1px solid var(--deprecated-text-input-border-disabled);
 }
 
-#app-mount [class*="reactionTooltip"], /* reaction hover tooltip */
-#app-mount [class*="topicsPillContainer"], /* summary topics pill */
-#app-mount [class*="topicsDropdown"]  /* summary topics modal */ { 
+#app-mount [class*="reactionTooltip_"] { /* reaction hover tooltip */
+/*#app-mount [class*="topicsPillContainer"], !* summary topics pill *!*/
+/*#app-mount [class*="topicsDropdown"]  !* summary topics modal *! { */
 	background-color: rgba(var(--transparencycolor_v), .9);
 }
 
@@ -84,19 +84,20 @@
 }
 
 /* expanded folder bg */
-#app-mount [class*="expandedFolderBackground"]:not([class*="collapsed"]) { 
+#app-mount [aria-label="Servers"] [class*="expandedFolderBackground"]:not([class*="collapsed"]) {
 	background-color: rgba(var(--transparencycolor), .6);
 	box-shadow: 0 0 5px rgba(var(--accentcolor), .6);
 }
 
 /* add server + discover icon */
-#app-mount [class*="circleIconButton"] { 
+#app-mount [aria-label="Add a Server"],
+#app-mount [aria-label="Discover"],
+#app-mount [aria-label="Download Apps"] {
 	background-color: rgba(var(--transparencycolor), .8);
 }
 
 /* autocomplete highlight */
-#app-mount [class*="clickable"][class*="autocompleteRowVertical"][class*="autocompleteRow"][class*="autocompleteRowVerticalSmall"] [class*="base"]:hover,
-#app-mount [class*="clickable"][class*="autocompleteRowVertical"][class*="autocompleteRow"][class*="autocompleteRowVerticalSmall"][aria-selected=true] [class*="base"] { 
+#app-mount [class*="autocompleteRowVertical"][aria-selected=true] [class*="base"] {
 	background-color: rgba(var(--accentcolor), .5);
 }
 
@@ -111,6 +112,6 @@
 }
 
 /* jump to present */
-#app-mount [class*="jumpToPresentBar"]::before {
+#app-mount [class^="jumpToPresentBar"]::before {
 	background: none;
 }
