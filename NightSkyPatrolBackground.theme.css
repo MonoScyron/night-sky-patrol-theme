@@ -102,9 +102,9 @@
 }
 
 /* sidebar bg */
-#app-mount nav[aria-label="Servers sidebar"] {
+/* #app-mount nav[aria-label="Servers sidebar"] {
 	background-color: rgb(0 0 0 / 0%);
-}
+} */
 
 /* sidebar border */
 #app-mount nav[aria-label="Servers sidebar"] ul  {
